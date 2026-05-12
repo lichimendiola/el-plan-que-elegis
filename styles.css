@@ -1962,10 +1962,15 @@ a { color: inherit; }
     grid-template-columns: 1fr;
   }
   .hero__eyebrow {
-    font-size: 10px;
+    font-size: clamp(8px, 2.5vw, 10px);
     margin-bottom: 18px;
-    gap: 6px;
+    gap: 5px;
+    flex-wrap: nowrap;
+    letter-spacing: .08em;
+    white-space: nowrap;
+    overflow: hidden;
   }
+  .hero__eyebrow span { flex-shrink: 1; min-width: 0; }
   .hero__title {
     font-size: clamp(2rem, 9vw, 2.8rem);
     line-height: 1.04;
@@ -2005,20 +2010,31 @@ a { color: inherit; }
   .branch-banner__title { font-size: 22px; }
   .branch-banner__sub   { font-size: 10px; }
 
-  /* Comecocos abierto + rotación: que entre justo, botones más chicos */
-  .gajos-stage { gap: 8px; }
-  .gajos-comecocos { width: calc(100vw - 92px); max-width: 380px; }
-  .gajo-tri { padding: 7% 11% 0; }
-  .gajo-tri__num   { font-size: 15px; margin-bottom: 6px; }
-  .gajo-tri__title { font-size: 13px; max-width: 88%; line-height: 1.18; }
+  /* Comecocos abierto: ocupa todo el ancho. Botones de rotación abajo,
+     no a los costados (libera ancho para que entre el texto del gajo). */
+  .gajos-stage {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .gajos-comecocos { width: min(420px, calc(100vw - 32px)); max-width: none; }
+  .gajo-tri { padding: 8% 11% 0; }
+  .gajo-tri__num   { font-size: 16px; margin-bottom: 6px; }
+  .gajo-tri__title {
+    font-size: clamp(11px, 3.4vw, 15px);
+    max-width: 92%;
+    line-height: 1.16;
+    letter-spacing: -.01em;
+  }
   .gajo-tri__cta   { font-size: 8px; padding: 5px 10px; margin-top: 8px; letter-spacing: .14em; }
   .rot-btn--side {
-    width: 38px;
-    min-height: 56px;
-    padding: 8px 4px;
-    border-radius: 18px;
+    width: auto;
+    min-height: 0;
+    padding: 10px 18px;
+    border-radius: 999px;
+    flex-direction: row;
+    gap: 6px;
   }
-  .rot-btn--side .rot-btn__lbl { display: none; }
+  .rot-btn--side .rot-btn__lbl { display: inline; font-size: 10px; }
 
   /* Answer card: padding y tipografía más chicas */
   .answer-card { padding: 22px 18px; }
@@ -2089,8 +2105,9 @@ a { color: inherit; }
 @media (max-width: 380px) {
   .hero__title { font-size: clamp(1.8rem, 9.4vw, 2.4rem); }
   .game__inner { padding: 18px 14px; }
-  .gajos-comecocos { width: calc(100vw - 84px); }
-  .gajo-tri__title { font-size: 12px; }
+  .gajos-comecocos { width: calc(100vw - 28px); }
+  .gajo-tri__title { font-size: clamp(10px, 3.2vw, 12px); }
+  .gajo-tri { padding: 8% 10% 0; }
   .answer-card { padding: 18px 14px; }
   .info-card, .person { padding: 18px 16px; }
 }
