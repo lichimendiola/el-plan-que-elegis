@@ -858,7 +858,9 @@ a { color: inherit; }
 @media (hover: hover) {
   .quad:hover { filter: brightness(1.06); }
 }
-.quad:active { transform: scale(.98); }
+/* Feedback de tap por filter, sin transform — un transform en el .quad
+   crea su propio layer y rompe la unión sub-pixel de la cruz central. */
+.quad:active { filter: brightness(.92); }
 
 .quad__num {
   font-family: var(--f-display);
@@ -1092,7 +1094,7 @@ a { color: inherit; }
     z-index: 3;
   }
 }
-.gajo-tri:active { transform: rotate(calc(var(--rot, 0) * 1deg)) scale(.985); }
+.gajo-tri:active { filter: brightness(.92); }
 
 .gajo-tri__num {
   font-family: var(--f-display);
