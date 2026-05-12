@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#14223A" />
+<title>El plan que elegís — Alivio fiscal Santa Fe</title>
+<meta name="description" content="Un juego de 2 minutos que capaz te ahorra plata. El paquete de alivio fiscal de la Provincia de Santa Fe, explicado con un comecocos." />
+<link rel="stylesheet" href="./styles.css?v=19" />
+<link rel="icon" href="./assets/logo/logo-color.png" type="image/png">
+</head>
+<body>
+
+<div class="bg-paper" aria-hidden="true"></div>
+<div class="bg-grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="topbar__left" href="#hero" aria-label="El plan que elegís — inicio">
+    <span class="brand__mark" aria-hidden="true"></span>
+    <span class="brand__name">El plan que elegís</span>
+  </a>
+  <nav class="topbar__nav">
+    <a href="#info" class="topbar__link">Cómo funciona</a>
+    <a href="#equipo" class="topbar__link">Nosotras</a>
+    <a href="#contacto" class="topbar__link">Contacto</a>
+  </nav>
+  <a class="topbar__brand" href="#equipo" aria-label="Bloque Unidos! Santa Fe Puede - Concejales">
+    <img src="./assets/logo/logo-color.png" alt="Unidos! Santa Fe Puede — Concejales" />
+  </a>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="hero__inner">
+    <p class="hero__eyebrow">
+      <span>Colo Battistutti</span>
+      <span>+</span>
+      <span>Silvina Cian</span>
+      <span>+</span>
+      <span>Caro Capovilla</span>
+    </p>
+    <h1 id="hero-title" class="hero__title">
+      Un juego que te hace <span class="grad-text">ahorrar plata.</span>
+    </h1>
+    <p class="hero__sub">
+      <strong>En la provincia bajaron los impuestos y abrieron un plan de 36 cuotas para los que se atrasaron.</strong>
+      Te lo contamos jugando un comecocos — la manera más simple de enterarte de algo importante para vos.
+    </p>
+    <div class="hero__cta">
+      <button class="btn btn--primary" id="btnStart" type="button">
+        Jugar al comecocos
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <a class="btn btn--ghost" href="#info">¿Cómo funciona?</a>
+    </div>
+    <ul class="hero__chips" role="list">
+      <li><span class="chip chip--blue">Bajar impuestos</span> Ley 14.426 — todo 2026</li>
+      <li><span class="chip chip--orange">Refinanciar deudas</span> Plan especial 36 cuotas</li>
+    </ul>
+  </div>
+
+  <div class="hero__visual">
+    <button class="paper-preview paper-preview--interactive" id="heroComecocos" type="button" aria-label="Empezar a jugar al comecocos">
+      <span class="paper-preview__quad q-orange">
+        <span class="pp-label">Refinanciar<br/>deudas</span>
+        <span class="pp-hint">Plan 36 cuotas</span>
+      </span>
+      <span class="paper-preview__quad q-blue">
+        <span class="pp-label">Bajar<br/>impuestos</span>
+        <span class="pp-hint">Ley 14.426</span>
+      </span>
+      <span class="paper-preview__quad q-blue">
+        <span class="pp-label">Bajar<br/>impuestos</span>
+        <span class="pp-hint">Ley 14.426</span>
+      </span>
+      <span class="paper-preview__quad q-orange">
+        <span class="pp-label">Refinanciar<br/>deudas</span>
+        <span class="pp-hint">Plan 36 cuotas</span>
+      </span>
+      <span class="paper-preview__cross"></span>
+      <span class="paper-preview__center"></span>
+      <span class="paper-preview__poke" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </button>
+    <p class="paper-preview__caption">Tocá para jugar — 2 minutos</p>
+  </div>
+</section>
+
+<!-- ============ JUEGO ============ -->
+<section class="game" id="game" aria-labelledby="game-title" hidden>
+  <div class="game__inner">
+
+    <header class="game__header">
+      <p class="eyebrow game__eyebrow">El juego</p>
+      <h2 id="game-title" class="game__title"><em>El plan,</em> lo elegís vos.</h2>
+      <p class="game__step" id="gameStep">Paso 1 — Elegí con cuál rama jugar</p>
+      <button class="btn btn--ghost btn--sm" id="btnReset" type="button" hidden>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Empezar de nuevo
+      </button>
+    </header>
+
+    <!-- ETAPA 1 — Comecocos cerrado -->
+    <div class="stage stage--closed" id="stageClosed">
+      <div class="comecocos comecocos--closed" id="comecocosClosed" role="group" aria-label="Comecocos cerrado, elegí una rama">
+        <button class="quad quad--orange" data-branch="orange" aria-label="Refinanciar deudas">
+          <span class="quad__num">I</span>
+          <span class="quad__body">
+            <span class="quad__label">Refinanciar<br/>deudas</span>
+            <span class="quad__hint">Plan 36 cuotas</span>
+          </span>
+        </button>
+        <button class="quad quad--blue" data-branch="blue" aria-label="Bajar impuestos">
+          <span class="quad__num">II</span>
+          <span class="quad__body">
+            <span class="quad__label">Bajar<br/>impuestos</span>
+            <span class="quad__hint">Ley 14.426</span>
+          </span>
+        </button>
+        <button class="quad quad--blue" data-branch="blue" aria-label="Bajar impuestos">
+          <span class="quad__num">III</span>
+          <span class="quad__body">
+            <span class="quad__label">Bajar<br/>impuestos</span>
+            <span class="quad__hint">Ley 14.426</span>
+          </span>
+        </button>
+        <button class="quad quad--orange" data-branch="orange" aria-label="Refinanciar deudas">
+          <span class="quad__num">IV</span>
+          <span class="quad__body">
+            <span class="quad__label">Refinanciar<br/>deudas</span>
+            <span class="quad__hint">Plan 36 cuotas</span>
+          </span>
+        </button>
+        <span class="comecocos__cross" aria-hidden="true"></span>
+        <span class="comecocos__center" aria-hidden="true"></span>
+      </div>
+      <p class="stage__hint">Tocá una solapa. Las dos azules abren <em>bajar impuestos</em>. Las dos naranjas, <em>refinanciar deudas</em>.</p>
+    </div>
+
+    <!-- ETAPA 2 — Comecocos abierto con 4 gajos triangulares -->
+    <div class="stage stage--open" id="stageOpen" hidden>
+      <div class="branch-banner" id="branchBanner">
+        <span class="branch-banner__dot" id="branchDot"></span>
+        <span class="branch-banner__title" id="branchTitle"></span>
+        <span class="branch-banner__sub" id="branchSub"></span>
+      </div>
+      <div class="gajos-stage">
+        <button class="rot-btn rot-btn--side" data-rot="-90" type="button" aria-label="Girar a la izquierda">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 14l-5-5 5-5M4 9h11a5 5 0 0 1 5 5v0a5 5 0 0 1-5 5H8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="rot-btn__lbl">Girar</span>
+        </button>
+        <div class="gajos-comecocos" id="gajos" role="group" aria-label="Comecocos abierto, elegí un gajo">
+          <!-- 4 gajos triangulares se inyectan acá por JS -->
+          <span class="gajos-comecocos__cross" aria-hidden="true"></span>
+          <span class="gajos-comecocos__center" aria-hidden="true"></span>
+        </div>
+        <button class="rot-btn rot-btn--side" data-rot="90" type="button" aria-label="Girar a la derecha">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 14l5-5-5-5M20 9H9a5 5 0 0 0-5 5v0a5 5 0 0 0 5 5h7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="rot-btn__lbl">Girar</span>
+        </button>
+      </div>
+      <p class="stage__hint">Elegí el titular que más te suena. Al tocarlo aparece la herramienta concreta y la info para profundizar.</p>
+    </div>
+
+    <!-- ETAPA 3 — Respuesta -->
+    <div class="stage stage--answer" id="stageAnswer" hidden>
+      <article class="answer-card" id="answerCard">
+        <header class="answer-card__head">
+          <span class="answer-card__pill" id="answerPill"></span>
+          <h3 class="answer-card__title" id="answerTitle"></h3>
+        </header>
+        <p class="answer-card__quote" id="answerQuote"></p>
+        <div class="answer-card__body">
+          <p class="answer-card__text" id="answerText"></p>
+          <ul class="answer-card__meta" id="answerMeta"></ul>
+        </div>
+        <div class="answer-card__cta">
+          <a class="btn btn--primary" id="answerLink" href="#" target="_blank" rel="noopener">Saber más</a>
+          <button class="btn btn--ghost" id="answerBack" type="button">Ver otro titular</button>
+          <button class="btn btn--ghost" id="answerSwitch" type="button">Cambiar de rama</button>
+        </div>
+
+        <!-- Deep dive: aparece debajo de la respuesta -->
+        <div class="deepdive" id="deepDive">
+          <p class="deepdive__head">Más info — el detalle copado</p>
+          <h4 class="deepdive__title" id="ddTitle">El detalle</h4>
+          <p class="deepdive__quote" id="ddQuote"></p>
+          <ul class="dd-highlights" id="ddHighlights"></ul>
+          <ol class="dd-steps" id="ddSteps"></ol>
+          <p class="dd-gotcha" id="ddGotcha"></p>
+        </div>
+
+        <aside class="share">
+          <span class="share__label">Compartilo:</span>
+          <button class="share__btn" data-share="wa" type="button">WhatsApp</button>
+          <button class="share__btn" data-share="copy" type="button">Copiar enlace</button>
+        </aside>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ INFO ============ -->
+<section class="info" id="info" aria-labelledby="info-title">
+  <div class="info__inner">
+    <p class="eyebrow">Compendio</p>
+    <h2 id="info-title" class="info__title">Dos paquetes,<br/><em>una sola política</em> de alivio.</h2>
+    <p class="info__lead">El gobierno de la Provincia puso en marcha dos medidas que se complementan. Una baja el peso del impuesto que se paga hoy. La otra ayuda a salir del pozo a quienes arrastran deuda.</p>
+
+    <div class="info__grid">
+      <article class="info-card info-card--blue">
+        <span class="info-card__tag">Ley 14.426 · todo 2026</span>
+        <h3>Bajar impuestos</h3>
+        <ul>
+          <li><strong>Crédito por la luz</strong> — hasta 30% de la factura EPE se descuenta del IIBB.</li>
+          <li><strong>Crédito por nuevo empleado</strong> — 100% del sueldo bruto descontable del IIBB.</li>
+          <li><strong>Alícuota 2,5%</strong> — para comercio chico que factura menos de $180M al año.</li>
+          <li><strong>Estabilidad fiscal</strong> — alícuotas garantizadas hasta diciembre de 2026.</li>
+        </ul>
+      </article>
+
+      <article class="info-card info-card--orange">
+        <span class="info-card__tag">Plan especial · 90 días para anotarse</span>
+        <h3>Refinanciar deudas</h3>
+        <ul>
+          <li><strong>Plan A</strong> — Pymes chicas y familias. Hasta 12 sin interés / 36 con tasa baja.</li>
+          <li><strong>Plan B</strong> — Quienes superan el patrimonio del A. Hasta 6 sin interés.</li>
+          <li><strong>Plan C</strong> — Empresas grandes. Hasta 6 sin interés / 36 al 2,5%.</li>
+          <li><strong>Plan D</strong> — Con causas administrativas o judiciales abiertas.</li>
+          <li><strong>Plan E</strong> — Prestadores de discapacidad. <em>36 cuotas, 0% interés.</em></li>
+        </ul>
+      </article>
+    </div>
+
+    <p class="info__cite">"En la provincia se están bajando impuestos. Y no es verso." — Maximiliano Pullaro</p>
+  </div>
+</section>
+
+<!-- ============ EQUIPO ============ -->
+<section class="team" id="equipo" aria-labelledby="team-title">
+  <header class="team__head">
+    <p class="eyebrow" style="justify-content:center;">Nosotras</p>
+    <h2 id="team-title" class="team__title">Tres concejalas,<br/><em>el mismo plan.</em></h2>
+    <p class="team__sub">Queremos que te enteres del alivio fiscal que está pasando en Santa Fe y que lo aproveches. Por eso salimos a contarlo así, con un juego.</p>
+  </header>
+
+  <div class="team__grid">
+    <article class="person">
+      <div class="person__photo" data-fallback="CB">
+        <img src="img/colo.jpg" alt="Colo Battistutti" onerror="this.style.display='none'" />
+      </div>
+      <h3 class="person__name">Colo Battistutti</h3>
+      <p class="person__role">Concejala</p>
+      <p class="person__bio">Cree que la mejor manera de explicar una política pública es hacerla simple, jugarla, y dejarla en la mano del que la necesita.</p>
+      <a class="person__handle" href="https://instagram.com/colobattistutti" target="_blank" rel="noopener">colobattistutti</a>
+    </article>
+
+    <article class="person">
+      <div class="person__photo" data-fallback="SC">
+        <img src="img/silvina.jpg" alt="Silvina Cian" onerror="this.style.display='none'" />
+      </div>
+      <h3 class="person__name">Silvina Cian</h3>
+      <p class="person__role">Concejala</p>
+      <p class="person__bio">Articula con la Administración Provincial de Impuestos. Se asegura de que cada herramienta de la ley llegue a quien la puede usar, sin laberintos.</p>
+      <a class="person__handle" href="https://instagram.com/silvinacian" target="_blank" rel="noopener">silvinacian</a>
+    </article>
+
+    <article class="person">
+      <div class="person__photo" data-fallback="CC">
+        <img src="img/caro.jpg" alt="Caro Capovilla" onerror="this.style.display='none'" />
+      </div>
+      <h3 class="person__name">Caro Capovilla</h3>
+      <p class="person__role">Concejala</p>
+      <p class="person__bio">Trabaja para que la información llegue ordenada y al alcance. Cuando una política pública se entiende, deja de ser un trámite y empieza a ser un alivio.</p>
+      <a class="person__handle" href="https://instagram.com/carocapovilla" target="_blank" rel="noopener">carocapovilla</a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="contact" id="contacto" aria-labelledby="contact-title">
+  <div class="contact__inner">
+    <h2 id="contact-title">¿Querés que te ayudemos<br/><em>a aplicar tu plan?</em></h2>
+    <p class="contact__lead">Escribinos por redes. Te contestamos personalmente y, si hace falta, te derivamos al asesor de la API.</p>
+    <div class="contact__handles">
+      <a class="handle" href="https://instagram.com/colobattistutti" target="_blank" rel="noopener">
+        <span class="handle__num">01</span>
+        <span class="handle__name">Colo Battistutti</span>
+        <span class="handle__user">@colobattistutti</span>
+      </a>
+      <a class="handle" href="https://instagram.com/silvinacian" target="_blank" rel="noopener">
+        <span class="handle__num">02</span>
+        <span class="handle__name">Silvina Cian</span>
+        <span class="handle__user">@silvinacian</span>
+      </a>
+      <a class="handle" href="https://instagram.com/carocapovilla" target="_blank" rel="noopener">
+        <span class="handle__num">03</span>
+        <span class="handle__name">Caro Capovilla</span>
+        <span class="handle__user">@carocapovilla</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <p class="footer__big"><em>El plan, lo elegís vos.</em></p>
+    <img class="footer__logo" src="./assets/logo/logo-color.png" alt="Unidos! Santa Fe Puede — Concejales" />
+    <p class="footer__top">Colo Battistutti  ·  Silvina Cian  ·  Caro Capovilla</p>
+    <p class="footer__bot">Alivio fiscal provincial · Ley 14.426 + Plan especial 36 cuotas · 2026</p>
+  </div>
+</footer>
+
+<script src="./data.js?v=19"></script>
+<script src="./script.js?v=19"></script>
+</body>
+</html>
