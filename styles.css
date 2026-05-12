@@ -714,6 +714,7 @@ a { color: inherit; }
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   width: min(560px, 92vw);
   aspect-ratio: 1;
   margin: 0 auto;
