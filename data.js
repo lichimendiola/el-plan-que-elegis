@@ -14,7 +14,7 @@ window.PLAN_DATA = {
     gajos: [
       {
         n: 1,
-        titular: "La factura de luz me está matando.",
+        titular: "Necesito ayuda con mi factura de luz.",
         pill: "Crédito EPE · Art. 26 / 27",
         h3: "El importe básico de la factura EPE se descuenta del IIBB, hasta el 30% del impuesto.",
         body: "Si sos industria, comercio o alojamiento y la luz está a tu nombre, el importe básico de tu factura EPE se puede usar como crédito fiscal contra el Impuesto sobre los Ingresos Brutos.",
