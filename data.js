@@ -61,7 +61,7 @@ window.PLAN_DATA = {
           "Trámite en SIAT > Otros Trámites > Solicitud Beneficio art. 28."
         ],
         cta: "Ver instructivo art. 28",
-        url: "https://www.santafe.gob.ar/api/",
+        url: "https://www.santafe.gob.ar/index.php/web/content/view/full/258547/(subtema)/102284",
         deepDive: {
           quote: "Promueve el empleo formal. Es de los beneficios más altos de la ley: hasta el 100% del sueldo bruto sale del impuesto.",
           highlights: [
@@ -94,7 +94,7 @@ window.PLAN_DATA = {
           "Reducción directa: impacto inmediato en el impuesto a pagar."
         ],
         cta: "Ver instructivo art. 29",
-        url: "https://www.santafe.gob.ar/api/",
+        url: "https://www.santafe.gob.ar/index.php/web/content/view/full/258549/(subtema)/102284",
         deepDive: {
           quote: "Es el más simple de todos: trámite único, sin cálculos mensuales, y queda activo todo el año.",
           highlights: [
@@ -147,7 +147,7 @@ window.PLAN_DATA = {
   orange: {
     id: "orange",
     title: "Refinanciar deudas",
-    sub: "Plan especial · 90 días para anotarse",
+    sub: "Plan especial · Hasta el 31/07/2026",
     gajos: [
       {
         n: 5,
@@ -160,11 +160,11 @@ window.PLAN_DATA = {
           "Plan B — Superan límite del A: hasta 6 sin interés / 7-12 al 0,5% / 13-36 al 2%.",
           "Plan C — Grandes contribuyentes: 6 sin interés / 7-12 al 0,75% / 13-36 al 2,5%.",
           "Para adherir: CUIT + Clave Fiscal ARCA + CBU para débito automático.",
-          "90 días desde el lanzamiento para anotarse.",
+          "Plazo para adherir: hasta el 31 de julio de 2026.",
           "Aplica a IIBB, Inmobiliario, Patente, Sellos, Becario."
         ],
         cta: "Adherir al plan",
-        url: "https://www.santafe.gob.ar/",
+        url: "https://www.santafe.gob.ar/index.php/web/content/view/full/259231/(subtema)/102287",
         deepDive: {
           quote: "“Pensamos en quienes todos los días se levantan para trabajar en un comercio o una industria.” — Pablo Olivares, Min. Economía.",
           highlights: [
@@ -178,7 +178,7 @@ window.PLAN_DATA = {
             "Elegir el plan que corresponde a tu perfil (A/B/C).",
             "Confirmar y empezar a pagar la primera cuota."
           ],
-          gotcha: "No te demores: la adhesión cierra a los 90 días del lanzamiento."
+          gotcha: "No te demores: la adhesión cierra el 31 de julio de 2026 (Res. Min. 91/2026)."
         }
       },
       {
@@ -195,7 +195,7 @@ window.PLAN_DATA = {
           "Adhesión digital por el portal Provincia."
         ],
         cta: "Adherir al plan",
-        url: "https://www.santafe.gob.ar/",
+        url: "https://www.santafe.gob.ar/index.php/web/content/view/full/259231/(subtema)/102287",
         deepDive: {
           quote: "El plan A es el más amable: pensado para que una familia se ponga al día con la patente del auto o el impuesto inmobiliario sin sacarse un crédito.",
           highlights: [
@@ -223,11 +223,11 @@ window.PLAN_DATA = {
           "Plan D — Discusiones abiertas o agentes con incumplimientos: 0,5% en 6 / 1,5% hasta 12 / 3% hasta 36.",
           "Capital, intereses y multas refinanciables.",
           "Adhesión digital por el portal Provincia.",
-          "90 días desde el lanzamiento.",
+          "Plazo para adherir: hasta el 31 de julio de 2026.",
           "Compatible con cierre de causas administrativas en curso."
         ],
         cta: "Adherir al plan",
-        url: "https://www.santafe.gob.ar/",
+        url: "https://www.santafe.gob.ar/index.php/web/content/view/full/259231/(subtema)/102287",
         deepDive: {
           quote: "“Desde el primer día pusimos orden en las cuentas públicas para poder afrontar momentos como éste.” — Maximiliano Pullaro.",
           highlights: [
@@ -259,7 +259,7 @@ window.PLAN_DATA = {
           "Documentación que acredite la actividad como prestador."
         ],
         cta: "Adherir al plan",
-        url: "https://www.santafe.gob.ar/",
+        url: "https://www.santafe.gob.ar/index.php/web/content/view/full/259231/(subtema)/102287",
         deepDive: {
           quote: "Es el plan más generoso de toda la batería: cero interés a tres años para los que cuidan a los que más lo necesitan.",
           highlights: [
