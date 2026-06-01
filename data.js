@@ -19,6 +19,7 @@ window.PLAN_DATA = {
         h3: "El importe básico de la factura EPE se descuenta del IIBB, hasta el 30% del impuesto.",
         body: "Si sos industria, comercio o alojamiento y la luz está a tu nombre, el importe básico de tu factura EPE se puede usar como crédito fiscal contra el Impuesto sobre los Ingresos Brutos.",
         meta: [
+          "Solo para contribuyentes del Régimen General de IIBB (no aplica al Régimen Simplificado).",
           "Aplica con la luz no residencial a nombre del contribuyente.",
           "Industria — tope 30% del impuesto determinado (Art. 26).",
           "Comercio chico — tope 30% si ingresos 2025 < $9.766M; 10% si < $66.319M.",
@@ -27,7 +28,7 @@ window.PLAN_DATA = {
           "El excedente se puede usar en meses siguientes."
         ],
         cta: "Ver instructivo arts. 26 y 27",
-        url: "https://www.santafe.gob.ar/api/",
+        url: "https://www.santafe.gob.ar/index.php/web/content/view/full/258548/(subtema)/102284",
         deepDive: {
           quote: "Reduce el impuesto a pagar y ayuda a sectores con alto consumo eléctrico. Compatible con los demás beneficios de la ley.",
           highlights: [
@@ -51,9 +52,10 @@ window.PLAN_DATA = {
         h3: "100% del sueldo bruto descontable del IIBB.",
         body: "Por cada empleado nuevo que sumes (sobre tu dotación al 30/11/2025), descontás del IIBB el 100% del sueldo bruto. Tope mensual atado al RIPTE. El Estado te paga, en menos impuesto, lo que vos sumás en trabajo.",
         meta: [
-          "Tope: valor RIPTE vigente — feb/2026 = $1.734.357,18 por empleado.",
-          "La dotación base se fija con el menor entre promedio sept-oct-nov 2025 y nov 2025.",
-          "Solo personal en relación de dependencia validado por Min. de Trabajo.",
+          "Solo para contribuyentes del Régimen General de IIBB.",
+          "Tope: RIPTE del mes anterior (va desfasado). Ejemplo feb/2026 = $1.734.357,18 por empleado.",
+          "Dotación base = el menor entre el promedio sept-oct-nov 2025 y la dotación de nov 2025.",
+          "Altas validadas por ARCA + Ministerio de Trabajo: relación de dependencia, pasantes o practicantes.",
           "Si baja la dotación, se pierde el beneficio.",
           "No genera saldo a favor.",
           "Trámite en SIAT > Otros Trámites > Solicitud Beneficio art. 28."
@@ -63,9 +65,9 @@ window.PLAN_DATA = {
         deepDive: {
           quote: "Promueve el empleo formal. Es de los beneficios más altos de la ley: hasta el 100% del sueldo bruto sale del impuesto.",
           highlights: [
-            { k: "100%", v: "Del sueldo bruto descontable del IIBB, hasta el RIPTE." },
-            { k: "30·XI·25", v: "Dotación base que se compara mes a mes." },
-            { k: "ARCA", v: "Las altas se validan vía Ministerio de Trabajo, no solo ARCA." },
+            { k: "100%", v: "Del sueldo bruto descontable del IIBB, hasta el tope RIPTE." },
+            { k: "30·XI·25", v: "Dotación base: el menor entre el promedio sept-oct-nov '25 y la dotación de nov '25." },
+            { k: "ARCA + MT", v: "Altas registradas en ARCA y Ministerio de Trabajo: incluye relación de dependencia, pasantes y practicantes." },
           ],
           steps: [
             "Solicitar el beneficio en SIAT antes de presentar DDJJ.",
@@ -73,7 +75,7 @@ window.PLAN_DATA = {
             "Validar mensualmente altas y bajas.",
             "El sistema toma el sueldo de los últimos empleados ingresados hasta cubrir el incremento."
           ],
-          gotcha: "Pasantías y programas de entrenamiento no cuentan. Solo personal en relación de dependencia formal."
+          gotcha: "El RIPTE se actualiza mes a mes y va con un mes de desfase. Consultá el valor vigente acá: https://www.argentina.gob.ar/trabajo/seguridadsocial/ripte"
         }
       },
       {
@@ -83,6 +85,7 @@ window.PLAN_DATA = {
         h3: "Alícuota de IIBB de 4,5%/5% baja al 2,5%.",
         body: "Si facturás menos de $180 millones al año y tenés la luz no residencial a tu nombre, podés bajar la alícuota a la mitad. Trámite único, vigente todo el 2026.",
         meta: [
+          "Solo para contribuyentes del Régimen General de IIBB (no aplica al Régimen Simplificado).",
           "Comercio o servicio de alojamiento.",
           "Ingresos brutos totales 2025 < $180.000.000.",
           "Suministro eléctrico no residencial a nombre del contribuyente.",
@@ -113,18 +116,17 @@ window.PLAN_DATA = {
         titular: "Quiero invertir pero necesito reglas claras.",
         pill: "Estabilidad · Arts. 66-72",
         h3: "Alícuotas garantizadas hasta diciembre de 2026.",
-        body: "La provincia garantiza que las alícuotas de IIBB no van a ser superiores a las que regían antes de la Ley 13.750. Vale para comercio, servicios, industria y agro. Y si otra provincia sube impuestos, hay mecanismos de compensación.",
+        body: "Un dato extra a tener en cuenta: la ley también prevé estabilidad fiscal hasta fin de 2026. No es un trámite — aplica por defecto a comercio, servicios, industria y agro.",
         meta: [
           "Vigente hasta el 31 de diciembre de 2026.",
           "Alcanza comercio, servicios, industria y sector agropecuario.",
           "Define expresamente qué es Pyme Santafesina.",
-          "Mecanismo de compensación si otras provincias suben impuestos.",
-          "Da previsibilidad para inversión y planificación."
+          "No requiere trámite: aplica por defecto."
         ],
         cta: "Conocer la Ley 14.426 completa",
         url: "https://www.santafe.gob.ar/",
         deepDive: {
-          quote: "No es un beneficio puntual: es la promesa de un terreno fiscal estable hasta fin de 2026 para que puedas planificar.",
+          quote: "No es un beneficio puntual: es un terreno fiscal estable hasta fin de 2026 para que puedas planificar.",
           highlights: [
             { k: "31·XII·26", v: "Garantía explícita hasta esta fecha." },
             { k: "Pyme SF", v: "La ley define qué se considera Pyme santafesina y la blinda." },
@@ -135,7 +137,7 @@ window.PLAN_DATA = {
             "Sirve como referencia para presupuestar y proyectar inversión.",
             "Combinar con los otros artículos para maximizar el beneficio."
           ],
-          gotcha: "La estabilidad está atada a una vigencia: para 2027 hay que ver qué sale en la próxima ley tributaria."
+          gotcha: "Esto es un dato para planificar, no una herramienta que tengas que tramitar. Para 2027 hay que ver la próxima ley tributaria."
         }
       }
     ]
@@ -184,10 +186,9 @@ window.PLAN_DATA = {
         titular: "Debo Patente o Inmobiliario.",
         pill: "Plan A · Familias",
         h3: "Hasta 12 cuotas sin interés o 36 con tasa accesible.",
-        body: "Si tenés hasta 2 inmuebles o hasta 2 vehículos a tu nombre, accedés al Plan A. Pensado para familias y contribuyentes chicos.",
+        body: "El Plan A está disponible para familias con deudas de Impuesto Inmobiliario y Patente Automotor que no posean más de dos inmuebles o dos vehículos registrados a nombre de un mismo titular.",
         meta: [
-          "Hasta 2 inmuebles registrados a nombre del mismo titular.",
-          "O hasta 2 vehículos registrados a nombre del mismo titular.",
+          "Sin más de 2 inmuebles o 2 vehículos registrados a nombre del mismo titular.",
           "12 cuotas sin interés.",
           "Hasta 36 cuotas con tasa mensual del 1,5%.",
           "Capital, intereses y multas incluidos.",
