@@ -1072,7 +1072,11 @@ a { color: inherit; }
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 8% 12% 0;
+  /* Padding lateral generoso: el clip-path es un triángulo isósceles
+     con base arriba y punta al centro — el ancho útil se estrecha
+     rápido al bajar. Necesitamos margen para que el texto NO se salga
+     por los lados angostos del triángulo. */
+  padding: 6% 18% 0;
   text-align: center;
   isolation: isolate;
   transition: filter .25s var(--ease), transform .35s var(--ease);
@@ -1108,11 +1112,12 @@ a { color: inherit; }
 .gajo-tri__title {
   font-family: var(--f-display);
   font-weight: 600;
-  font-size: clamp(16px, 1.85vw, 21px);
-  line-height: 1.18;
+  font-size: clamp(13px, 1.45vw, 18px);
+  line-height: 1.16;
   letter-spacing: -.012em;
   margin: 0;
-  max-width: 80%;
+  max-width: 100%;
+  text-wrap: balance;
   text-shadow: 0 2px 16px rgba(0,0,0,.30);
   color: #fff;
 }
