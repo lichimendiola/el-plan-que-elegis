@@ -32,7 +32,7 @@ window.PLAN_DATA = {
         deepDive: {
           quote: "Reduce el impuesto a pagar y ayuda a sectores con alto consumo eléctrico. Compatible con los demás beneficios de la ley.",
           highlights: [
-            { k: "30%", v: "Tope industria · pequeñas demandas industriales y grandes demandas." },
+            { k: "30%", v: "Es el tope: el crédito no puede superar el 30% del IIBB determinado." },
             { k: "EPE", v: "El crédito sale del importe básico de la factura efectivamente pagada." },
             { k: "+", v: "Compatible con arts. 28 y 29: se pueden apilar." },
           ],
