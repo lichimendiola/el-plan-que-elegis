@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="sunset" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAD000"/>
+      <stop offset="22%" stop-color="#F0950A"/>
+      <stop offset="42%" stop-color="#D75529"/>
+      <stop offset="62%" stop-color="#B33457"/>
+      <stop offset="82%" stop-color="#921D77"/>
+      <stop offset="100%" stop-color="#43276F"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(16,16) rotate(45)">
+    <rect x="-11" y="-11" width="22" height="22" rx="3.4" fill="url(#sunset)"/>
+    <rect x="-5.3" y="-5.3" width="10.6" height="10.6" rx="1.6" fill="#F4ECDC"/>
+  </g>
+</svg>
