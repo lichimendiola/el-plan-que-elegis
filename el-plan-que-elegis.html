@@ -1864,7 +1864,7 @@ a { color: inherit; }
 
 .mov-banks {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
   margin-bottom: 24px;
 }
@@ -1906,6 +1906,12 @@ a { color: inherit; }
   color: var(--ink-2);
 }
 .mov-bank dd strong { color: var(--ink); font-weight: 700; }
+
+/* Ficha unica a todo el ancho: los pares fluyen de a dos por fila para
+   que no quede una columna larga con medio bloque vacio al costado. */
+@media (min-width: 721px) {
+  .mov-bank--solo dl { grid-template-columns: auto 1fr auto 1fr; gap: 12px 18px; }
+}
 
 .mov__note {
   font-size: 13.5px;
@@ -2823,7 +2829,7 @@ a { color: inherit; }
       <span class="empleo__title-sub">crédito blando para renovar taxis, remises y colectivos interurbanos.</span>
     </h2>
     <p class="empleo__lead">
-      Son <strong>dos líneas de crédito</strong> para que los que mueven a la provincia puedan cambiar la unidad. La Provincia <strong>bonifica parte de la tasa</strong>, y los préstamos los dan el Banco Santa Fe y el Banco Municipal.
+      Son <strong>dos líneas de crédito</strong> para que los que mueven a la provincia puedan cambiar la unidad. La Provincia <strong>bonifica parte de la tasa</strong> y el préstamo lo da el <strong>Banco Santa Fe</strong>.
     </p>
 
     <div class="empleo__highlight">
@@ -2837,20 +2843,11 @@ a { color: inherit; }
     </div>
 
     <div class="mov-banks">
-      <article class="mov-bank">
-        <h4>Banco Santa Fe · colectivos</h4>
+      <article class="mov-bank mov-bank--solo">
+        <h4>Banco Santa Fe · colectivos interurbanos</h4>
         <dl>
           <dt>Máximo</dt><dd><strong>$1.000 millones</strong> por beneficiario</dd>
           <dt>Tasa</dt><dd>TAMAR ajustada + 8,5 ppa</dd>
-          <dt>Bonificación</dt><dd>Provincia: 10 ppa</dd>
-          <dt>Plazo</dt><dd>hasta <strong>60 meses</strong></dd>
-        </dl>
-      </article>
-      <article class="mov-bank">
-        <h4>Banco Municipal · colectivos</h4>
-        <dl>
-          <dt>Máximo</dt><dd><strong>$1.000 millones</strong> por beneficiario</dd>
-          <dt>Tasa</dt><dd>TAMAR + 10 ppa</dd>
           <dt>Bonificación</dt><dd>Provincia: 10 ppa</dd>
           <dt>Plazo</dt><dd>hasta <strong>60 meses</strong></dd>
         </dl>
@@ -2869,22 +2866,13 @@ a { color: inherit; }
     </div>
 
     <div class="mov-banks">
-      <article class="mov-bank">
+      <article class="mov-bank mov-bank--solo">
         <h4>Banco Santa Fe · taxis y remises</h4>
         <dl>
           <dt>Máximo</dt><dd><strong>$200 millones</strong> por beneficiario</dd>
           <dt>Tasa fija</dt><dd>39% — plazo 24 meses</dd>
           <dt>Tasa variable</dt><dd>TAMAR ajustada + 7,5 ppa — plazo 36 meses</dd>
           <dt>Bonificación</dt><dd>Provincia: 7,5 ppa</dd>
-        </dl>
-      </article>
-      <article class="mov-bank">
-        <h4>Banco Municipal · taxis y remises</h4>
-        <dl>
-          <dt>Máximo</dt><dd><strong>$150 millones</strong> por beneficiario</dd>
-          <dt>Tasa</dt><dd>TAMAR + 12 ppa</dd>
-          <dt>Bonificación</dt><dd>Provincia: 12 ppa</dd>
-          <dt>Plazo</dt><dd><strong>36 meses</strong></dd>
         </dl>
       </article>
     </div>
@@ -2905,7 +2893,7 @@ a { color: inherit; }
     </div>
 
     <div class="empleo__cta">
-      <p class="empleo__cta-note">Provincia de Santa Fe · Municipalidad de Rosario · Banco Santa Fe · Banco Municipal</p>
+      <p class="empleo__cta-note">Provincia de Santa Fe · Ministerio de Desarrollo Productivo · Ministerio de Economía · Banco Santa Fe</p>
     </div>
   </div>
 </section>

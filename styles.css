@@ -1838,7 +1838,7 @@ a { color: inherit; }
 
 .mov-banks {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
   margin-bottom: 24px;
 }
@@ -1880,6 +1880,12 @@ a { color: inherit; }
   color: var(--ink-2);
 }
 .mov-bank dd strong { color: var(--ink); font-weight: 700; }
+
+/* Ficha unica a todo el ancho: los pares fluyen de a dos por fila para
+   que no quede una columna larga con medio bloque vacio al costado. */
+@media (min-width: 721px) {
+  .mov-bank--solo dl { grid-template-columns: auto 1fr auto 1fr; gap: 12px 18px; }
+}
 
 .mov__note {
   font-size: 13.5px;
