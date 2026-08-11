@@ -2,6 +2,9 @@
    Datos del comecocos · El plan que elegís
    Fuente: Brief Técnico (Mayo 2026) — textos validados +
    Resumen oficial Ley 14.426 + Discurso Pullaro Plan 36 cuotas
+   Actualizado agosto 2026 con las respuestas de API al
+   documento "Consultas técnicas — Alivio Fiscal (agosto 2026)".
+   Prórroga de adhesión: RES-2026-00000171-APPSF-OD.
    ======================================================== */
 
 window.PLAN_DATA = {
@@ -53,7 +56,7 @@ window.PLAN_DATA = {
         body: "Por cada empleado nuevo que sumes (sobre tu dotación al 30/11/2025), descontás del IIBB el 100% del sueldo bruto. Tope mensual atado al RIPTE. El Estado te paga, en menos impuesto, lo que vos sumás en trabajo.",
         meta: [
           "Solo para contribuyentes del Régimen General de IIBB.",
-          "Tope: RIPTE del mes anterior (va desfasado). Ejemplo feb/2026 = $1.734.357,18 por empleado.",
+          "Tope por empleado: el RIPTE vigente al último día del mes de la declaración jurada. Se actualiza todos los meses.",
           "Dotación base = el menor entre el promedio sept-oct-nov 2025 y la dotación de nov 2025.",
           "Altas validadas por ARCA + Ministerio de Trabajo: relación de dependencia, pasantes o practicantes.",
           "Si baja la dotación, se pierde el beneficio.",
@@ -75,7 +78,7 @@ window.PLAN_DATA = {
             "Validar mensualmente altas y bajas.",
             "El sistema toma el sueldo de los últimos empleados ingresados hasta cubrir el incremento."
           ],
-          gotcha: "El RIPTE se actualiza mes a mes y va con un mes de desfase. Consultá el valor vigente acá: https://www.argentina.gob.ar/trabajo/seguridadsocial/ripte"
+          gotcha: "No hay un número fijo: el tope es el RIPTE vigente al último día del mes de la DDJJ y cambia todos los meses. Consultá el valor actualizado acá: https://www.argentina.gob.ar/trabajo/seguridadsocial/ripte"
         }
       },
       {
@@ -147,21 +150,22 @@ window.PLAN_DATA = {
   orange: {
     id: "orange",
     title: "Refinanciar deudas",
-    sub: "Plan especial · Hasta el 31/07/2026",
+    sub: "Plan especial · Hasta el 30/09/2026",
     gajos: [
       {
         n: 5,
         titular: "Me atrasé con IIBB en mi negocio.",
         pill: "Plan A / B / C",
         h3: "Hasta 12 cuotas sin interés. Hasta 36 con tasa baja.",
-        body: "El plan alcanza capital, intereses y multas. La cuota se ajusta según el tamaño del contribuyente. Adhesión 100% digital por el portal Provincia, 90 días para anotarse.",
+        body: "El plan alcanza capital, intereses y multas. La cuota se ajusta según el tamaño del contribuyente. Adhesión digital por el portal Provincia: tenés tiempo hasta el 30 de septiembre de 2026.",
         meta: [
-          "Plan A — Pymes chicas: hasta 12 sin interés / 13-36 al 1,5%.",
-          "Plan B — Superan límite del A: hasta 6 sin interés / 7-12 al 0,5% / 13-36 al 2%.",
-          "Plan C — Grandes contribuyentes: 6 sin interés / 7-12 al 0,75% / 13-36 al 2,5%.",
-          "Para adherir: CUIT + Clave Fiscal ARCA + CBU para débito automático.",
-          "Plazo para adherir: hasta el 31 de julio de 2026.",
-          "Aplica a IIBB, Inmobiliario, Patente, Sellos, Becario."
+          "Plazo para adherir: hasta el 30 de septiembre de 2026.",
+          "Alcanza deudas vencidas hasta el 31 de marzo de 2026.",
+          "Si tributás IIBB, el plan que te toca depende de tu categoría (art. 4), no de cuántos bienes tengas.",
+          "Plan A — si no integrás las categorías 1, 2 o 3: hasta 12 sin interés / 13-36 al 1,5%.",
+          "Plan C — si integrás las categorías 1, 2 o 3: 6 sin interés / 7-12 al 0,75% / 13-36 al 2,5%.",
+          "Para adherir: CUIT + Clave Fiscal ARCA + servicio «API – Santa Fe» habilitado + CBU para el débito.",
+          "Aplica a IIBB, Inmobiliario, Patente Única sobre Vehículos, Sellos, Instituto Becario y Tasa Retributiva de Servicios."
         ],
         cta: "Adherir al plan",
         url: "https://www.santafe.gob.ar/index.php/web/content/view/full/259231/(subtema)/102287",
@@ -173,12 +177,12 @@ window.PLAN_DATA = {
             { k: "K+i+m", v: "Capital, intereses y multas, todo refinanciable." },
           ],
           steps: [
-            "Entrar al portal de la Provincia con CUIT y Clave Fiscal ARCA.",
+            "Entrar al portal de la Provincia con CUIT y Clave Fiscal ARCA (con el servicio «API – Santa Fe» habilitado).",
             "Cargar la CBU desde la que va a salir el débito automático.",
-            "Elegir el plan que corresponde a tu perfil (A/B/C).",
-            "Confirmar y empezar a pagar la primera cuota."
+            "Elegir el plan que corresponde a tu perfil.",
+            "Pagar la primera cuota: recién ahí el plan queda formalizado."
           ],
-          gotcha: "No te demores: la adhesión cierra el 31 de julio de 2026 (Res. Min. 91/2026)."
+          gotcha: "No te demores: la adhesión cierra el 30 de septiembre de 2026 (RES-2026-00000171-APPSF-OD). La prórroga solo corrió la fecha — no cambió tasas, cuotas ni requisitos."
         }
       },
       {
@@ -188,11 +192,13 @@ window.PLAN_DATA = {
         h3: "Hasta 12 cuotas sin interés o 36 con tasa accesible.",
         body: "El Plan A está disponible para familias con deudas de Impuesto Inmobiliario y Patente Automotor que no posean más de dos inmuebles o dos vehículos registrados a nombre de un mismo titular.",
         meta: [
-          "Sin más de 2 inmuebles o 2 vehículos registrados a nombre del mismo titular.",
+          "Hasta 2 inmuebles y/o 2 vehículos registrados a nombre del mismo titular.",
+          "Si superás ese límite, te corresponde el Plan B: 6 sin interés / 7-12 al 0,5% / 13-36 al 2%.",
           "12 cuotas sin interés.",
           "Hasta 36 cuotas con tasa mensual del 1,5%.",
           "Capital, intereses y multas incluidos.",
-          "Adhesión digital por el portal Provincia."
+          "Alcanza deudas vencidas hasta el 31 de marzo de 2026.",
+          "Adhesión digital por el portal Provincia, hasta el 30 de septiembre de 2026."
         ],
         cta: "Adherir al plan",
         url: "https://www.santafe.gob.ar/index.php/web/content/view/full/259231/(subtema)/102287",
@@ -207,9 +213,10 @@ window.PLAN_DATA = {
             "Verificar que estás dentro del límite patrimonial (≤2 inmuebles / ≤2 autos).",
             "Entrar al portal con CUIT y Clave Fiscal ARCA.",
             "Asociar tus deudas de Inmobiliario y Patente.",
-            "Elegir cantidad de cuotas y CBU para débito."
+            "Elegir cantidad de cuotas y CBU para débito.",
+            "Pagar la primera cuota: recién ahí el plan queda formalizado."
           ],
-          gotcha: "Si superás el límite patrimonial, te corresponde Plan B (no Plan A)."
+          gotcha: "Si superás el límite patrimonial, te corresponde Plan B (no Plan A). Y ojo con el débito: el plan caduca si se acumulan tres cuotas impagas o si rebota el débito automático."
         }
       },
       {
@@ -217,31 +224,31 @@ window.PLAN_DATA = {
         titular: "Soy empresa grande y arrastro un saldo viejo.",
         pill: "Plan C / D",
         h3: "Hasta 6 cuotas sin interés. Hasta 36 con tasa según perfil.",
-        body: "Aplica también si tenés discusiones administrativas o judiciales abiertas, o si sos agente de retención/percepción con incumplimientos.",
+        body: "Si tributás IIBB e integrás las categorías 1, 2 o 3 del art. 4, te corresponde el Plan C. Y también se pueden regularizar deudas que están en fiscalización, en discusión administrativa o en gestión judicial.",
         meta: [
-          "Plan C — Grandes contribuyentes: 6 sin interés / 7-12 al 0,75% / 13-36 al 2,5%.",
-          "Plan D — Discusiones abiertas o agentes con incumplimientos: 0,5% en 6 / 1,5% hasta 12 / 3% hasta 36.",
+          "Plan C — Contribuyentes de IIBB de las categorías 1, 2 o 3: 6 sin interés / 7-12 al 0,75% / 13-36 al 2,5%.",
+          "Plan D — Si además se te considera «no cumplidor»: 0,5% hasta 6 / 1,5% hasta 12 / 3% hasta 36.",
           "Capital, intereses y multas refinanciables.",
-          "Adhesión digital por el portal Provincia.",
-          "Plazo para adherir: hasta el 31 de julio de 2026.",
-          "Compatible con cierre de causas administrativas en curso."
+          "También entran deudas en fiscalización, discusión administrativa, gestión judicial, concursos y quiebras.",
+          "Alcanza deudas vencidas hasta el 31 de marzo de 2026.",
+          "Plazo para adherir: hasta el 30 de septiembre de 2026."
         ],
         cta: "Adherir al plan",
         url: "https://www.santafe.gob.ar/index.php/web/content/view/full/259231/(subtema)/102287",
         deepDive: {
           quote: "“Desde el primer día pusimos orden en las cuentas públicas para poder afrontar momentos como éste.” — Maximiliano Pullaro.",
           highlights: [
-            { k: "C", v: "Grandes contribuyentes: tasa más alta pero mismo cuotaje." },
-            { k: "D", v: "Empresas con causas abiertas: les abre la puerta a regularizarse." },
-            { k: "3%", v: "Tasa máxima para deudores con causas — sigue siendo accesible." },
+            { k: "C", v: "Categorías 1, 2 o 3 del art. 4: tasa más alta pero mismo cuotaje." },
+            { k: "D", v: "Mismo perfil pero considerado «no cumplidor»." },
+            { k: "3%", v: "Tasa máxima del Plan D — sigue siendo accesible." },
           ],
           steps: [
-            "Diagnóstico previo: identificar causas administrativas o judiciales abiertas.",
-            "Hablar con el contador o asesor para ver qué plan corresponde.",
-            "Adherir desde el portal Provincia con CUIT y Clave Fiscal ARCA.",
-            "Asegurar la CBU para el débito automático."
+            "Diagnóstico previo con el contador: ver qué categoría del art. 4 te toca.",
+            "Si la deuda está en fiscalización o discusión, presentar el allanamiento y pedir la liquidación en la Administración Regional.",
+            "Si está en ejecución fiscal, hacer el trámite ante la Oficina de Apremios o el juzgado.",
+            "Adherir desde el portal Provincia con CUIT, Clave Fiscal ARCA y CBU para el débito."
           ],
-          gotcha: "Si sos agente de retención/percepción con incumplimientos, vas al Plan D, no al C."
+          gotcha: "Acá la adhesión no siempre es 100% digital: las deudas en fiscalización, en discusión administrativa o en ejecución fiscal piden una gestión previa ante API o el juzgado."
         }
       },
       {
@@ -255,7 +262,8 @@ window.PLAN_DATA = {
           "0% de interés mensual.",
           "Aplica a instituciones y prestadores de discapacidad.",
           "Capital, intereses y multas incluidos.",
-          "Adhesión digital por el portal Provincia.",
+          "Alcanza deudas vencidas hasta el 31 de marzo de 2026.",
+          "Adhesión digital por el portal Provincia, hasta el 30 de septiembre de 2026.",
           "Documentación que acredite la actividad como prestador."
         ],
         cta: "Adherir al plan",
