@@ -227,7 +227,7 @@ window.PLAN_DATA = {
         body: "Si tributás IIBB e integrás las categorías 1, 2 o 3 del art. 4, te corresponde el Plan C. Y también se pueden regularizar deudas que están en fiscalización, en discusión administrativa o en gestión judicial.",
         meta: [
           "Plan C — Contribuyentes de IIBB de las categorías 1, 2 o 3: 6 sin interés / 7-12 al 0,75% / 13-36 al 2,5%.",
-          "Plan D — Si además se te considera «no cumplidor»: 0,5% hasta 6 / 1,5% hasta 12 / 3% hasta 36.",
+          "Plan D — 0,5% hasta 6 / 1,5% hasta 12 / 3% hasta 36. Consultá con tu contador si te corresponde.",
           "Capital, intereses y multas refinanciables.",
           "También entran deudas en fiscalización, discusión administrativa, gestión judicial, concursos y quiebras.",
           "Alcanza deudas vencidas hasta el 31 de marzo de 2026.",
@@ -239,8 +239,8 @@ window.PLAN_DATA = {
           quote: "“Desde el primer día pusimos orden en las cuentas públicas para poder afrontar momentos como éste.” — Maximiliano Pullaro.",
           highlights: [
             { k: "C", v: "Categorías 1, 2 o 3 del art. 4: tasa más alta pero mismo cuotaje." },
-            { k: "D", v: "Mismo perfil pero considerado «no cumplidor»." },
-            { k: "3%", v: "Tasa máxima del Plan D — sigue siendo accesible." },
+            { k: "3%", v: "Tasa máxima del Plan D, el tramo más alto — sigue siendo accesible." },
+            { k: "K+i+m", v: "Capital, intereses y multas, todo refinanciable." },
           ],
           steps: [
             "Diagnóstico previo con el contador: ver qué categoría del art. 4 te toca.",
