@@ -1831,64 +1831,6 @@ a { color: inherit; }
    a azul institucional para diferenciarlo del naranja de Empleo Joven. */
 .empleo__highlight--plf::before { background: var(--ink); }
 
-/* ===== Tercer programa: Movilidad =====
-   Reusa .empleo-* para el encabezado, el highlight y las tarjetas.
-   Lo propio son las fichas de condiciones por banco. */
-.empleo__highlight--mov2::before { background: var(--ink); }
-
-.mov-banks {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-bottom: 24px;
-}
-.mov-bank {
-  background: var(--paper-cream);
-  border: 1px solid var(--rule);
-  border-radius: 6px;
-  padding: 22px 20px;
-}
-.mov-bank h4 {
-  font-family: var(--f-display);
-  font-weight: 800;
-  font-size: 15px;
-  letter-spacing: -.01em;
-  color: var(--ink);
-  margin: 0 0 14px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--rule);
-}
-.mov-bank dl {
-  margin: 0;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 9px 16px;
-}
-.mov-bank dt {
-  font-family: var(--f-display);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  color: var(--ink-5);
-  padding-top: 3px;
-}
-.mov-bank dd {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--ink-2);
-}
-.mov-bank dd strong { color: var(--ink); font-weight: 700; }
-
-.mov__note {
-  font-size: 13.5px;
-  line-height: 1.55;
-  color: var(--ink-3);
-  margin: 0 0 28px;
-}
-.mov__note strong { color: var(--ink); font-weight: 700; }
-
 .empleo__contact {
   list-style: none;
   margin: 0;
@@ -2404,7 +2346,6 @@ a { color: inherit; }
   .empleo__grid { grid-template-columns: 1fr; }
   .empleo__stat-num { font-size: 64px; }
   .empleo__contact { flex-direction: column; gap: 14px; }
-  .mov-banks { grid-template-columns: 1fr; }
 
   /* Team: una columna, fotos más chicas */
   .team { padding: 0 16px; margin: 56px auto; }
